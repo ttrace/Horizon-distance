@@ -13,7 +13,10 @@ def calc_distance():
     return distance
 
 def print_params():
-    distanceString = "Horizon is {0:,.2f} km away".format(calc_distance())
+    if calc_distance() < 1.0:
+        distanceString = "Horizon is {0:,.1f} m away".format(calc_distance() * 1000)
+    else:
+        distanceString = "Horizon is {0:,.1f} km away".format(calc_distance())
     print('Radius of the planet: {0:,.2f} km'.format(planetSize))
     print('          Eye height: {0:,.2f} m'.format(eyeHeight * 1000))
     print(distanceString)
