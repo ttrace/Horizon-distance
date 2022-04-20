@@ -9,7 +9,7 @@ distance = 0
 print('Distance to Horizon')
 
 def calc_distance():
-    distance = sqrt(2* planetSize * eyeHeight) * 1.06
+    distance = sqrt((2 * planetSize + eyeHeight) * eyeHeight) * 1.06
     return distance
 
 def print_params():
