@@ -6,16 +6,16 @@ eyeHeight = 1.5 / 1000
 # in m
 distance = 0
 
-print('Distance for holizon')
+print('Distance to Horizon')
 
 def calc_distance():
     distance = sqrt(2* planetSize * eyeHeight) * 1.06
     return distance
 
 def print_params():
-    distanceString = "Horizon is {0:.2f}km away".format(calc_distance())
-    print('Radius of the planet: {0:.2f}km'.format(planetSize))
-    print('Eye height:', eyeHeight * 1000, 'm')
+    distanceString = "Horizon is {0:,.2f} km away".format(calc_distance())
+    print('Radius of the planet: {0:,.2f} km'.format(planetSize))
+    print('          Eye height: {0:,.2f} m'.format(eyeHeight * 1000))
     print(distanceString)
 
 print_params()
